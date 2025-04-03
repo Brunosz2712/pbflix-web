@@ -1,15 +1,21 @@
 import { Film } from "lucide-react";
+import CrudDropdown from "./crud-dropdown";
 
-export default function CategoryItem(){
-    return(
+interface CategoryItemProps {
+    category: Category;
+}
+
+export default function CategoryItem({ category }: CategoryItemProps) {
+    return (
         <div className="flex justify-between mt-2">
             <div className="flex gap-2">
-            <Film />
-                <span>nome da categoria</span>
+                <Film />
+                <span>{category.nameMovie}</span>
             </div>
 
-            <div>...</div>
-
+            <div>
+                <CrudDropdown />
+            </div>
         </div>
-    )
+    );
 }

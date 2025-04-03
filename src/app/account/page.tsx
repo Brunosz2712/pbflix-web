@@ -4,7 +4,7 @@ import Register from "@/components/register";
 export default function AccountPage(){
     return(
         <>
-        <NavBar/>
+        <NavBar active="conta"/>
 
         <main className="flex justify-center text-red-600">
             <div className="bg-slate-950 min-w-2/3 m-6 p-6 rounded">
