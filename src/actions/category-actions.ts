@@ -14,7 +14,7 @@ interface ErrorResponse {
 
 export async function createCategory(initialState: any, formData: FormData) {
     const data = {
-        nameMovie: formData.get("name"),
+        name: formData.get("name"),
         gender: formData.get("gender"),
         icon: formData.get("icon")
     };
@@ -34,12 +34,12 @@ export async function createCategory(initialState: any, formData: FormData) {
 
         return {
             values: {
-                nameMovie: formData.get("name"),
+                name: formData.get("name"),
                 gender: formData.get("gender"),
                 icon: formData.get("icon"),
             },
             errors: {
-                nameMovie: errors.find((error: ErrorResponse) => error.field === "name")?.message,
+                name: errors.find((error: ErrorResponse) => error.field === "name")?.message,
                 gender: errors.find((error: ErrorResponse) => error.field === "gender")?.message,        
                 icon: errors.find((error: ErrorResponse) => error.field === "icon")?.message,
             },

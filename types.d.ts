@@ -1,6 +1,6 @@
 interface Category {
     id: number,
-    nameMovie: string,
+    name: string,
     gender: string,
     icon: string
 }

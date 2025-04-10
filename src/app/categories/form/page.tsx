@@ -10,12 +10,12 @@ import { useActionState } from "react";
 
 const initialState= {
     values:{
-        nameMovie: "",
+        name: "",
         gender: "",
         icon: ""
     },
     errors:{
-        nameMovie: "",
+        name: "",
         gender: "",
         icon: ""
     }
@@ -36,12 +36,12 @@ export default function CategoryFormPage(){
                         
                         <div>
                             <Input 
-                                nameMovie="name" 
+                                name="name" 
                                 placeholder="Nome do Filme" 
-                                aria-invalid={!!state?.errors.nameMovie} 
-                                defaultValue={state?.values.nameMovie}
+                                aria-invalid={!!state?.errors.name} 
+                                defaultValue={state?.values.name}
                             />
-                            <span className="text-sm text-destructive">{state?.errors.nameMovie}</span>
+                            <span className="text-sm text-destructive">{state?.errors.name}</span>
                         </div>
 
                         <div>
